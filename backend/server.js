@@ -11,6 +11,7 @@ import { getAttendanceDetails } from "./controllers/AttendanceController.js";
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
+const DB_HOST = process.env.DB_HOST || "localhost";
 
 // 🧩 Utility functions
 const setCorsHeaders = (req, res) => {
@@ -112,5 +113,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://${DB_HOST}`);
 });
