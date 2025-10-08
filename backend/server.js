@@ -113,5 +113,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`🚀 Server running at http://${DB_HOST}`);
+  console.log(`🚀 Server running at http://${DB_HOST}:${PORT}`);
 });
